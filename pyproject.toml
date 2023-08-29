@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "tst-poetry2nix"
+version = "0.1.0"
+description = ""
+authors = ["ppenguin <hieronymusv@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tst_poetry2nix"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
