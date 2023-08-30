@@ -21,10 +21,10 @@
           default = self.packages.${system}.myapp;
         };
 
-        # devShells.default = pkgs.mkShell {
-        #   packages = [ poetry2nix.packages.${system}.poetry ];
-        # };
-        devShells.default = (mkPoetryEnv { projectDir=./.; }).env;
+        devShells.default = pkgs.mkShell {
+          packages = [ poetry2nix.packages.${system}.poetry ];
+        };
+        # devShells.default = (mkPoetryEnv { projectDir=./.; }).env; # this works, the above doesn't
 
       });
 }
